@@ -1,0 +1,139 @@
+.inbox {
+  padding: 1rem;
+
+  .invitations {
+    position: relative;
+    margin: 0 auto;
+    height: 20rem;
+    box-sizing: content-box;
+    max-width: 20rem;
+  }
+}
+
+article.invitation {
+  @include position(absolute, 0% null null 0%);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
+  background: $oc-white;
+  box-shadow: $base-shadow;
+
+  &:not(:last-child) {
+    // opacity: 0;
+    // transform: scale(.75);
+  }
+
+  header {
+    padding: 1rem 1rem 0rem 0rem;
+    margin: 0 0 .75rem 3rem;
+    position: relative;
+    flex: 0;
+
+    .date {
+      @include ellipsis;
+      display: block;
+      font-size: $small-font-size;
+      line-height: 1rem;
+      color: $secondary-font-color;
+      font-weight: $light-font-weight;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    h2 {
+      @include ellipsis;
+      display: block;
+      font-weight: $light-font-weight;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 2rem;
+      height: .25rem;
+      background: $accent-color;
+      margin-top: .5rem;
+    }
+  }
+
+  > section {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  ul {
+    margin: 0 0 $small-spacing 3rem;
+    line-height: 1rem;
+    font-size: $small-font-size;
+    font-weight: $light-font-weight;
+    color: $secondary-font-color;
+
+    li {
+      position: relative;
+      margin: 0 0 .5rem;
+    }
+
+    b {
+      color: $base-font-color;
+      font-weight: $base-font-weight;
+    }
+
+    svg {
+      @include position(absolute, 0rem null null -2rem);
+    }
+
+    path {
+      fill: currentColor;
+    }
+  }
+
+  footer {
+    margin: 0 1rem;
+    border-top: $base-border;
+    height: 3.5rem;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      background: none;
+      padding: 0;
+      margin: 0;
+      outline: 0;
+      @include size(2.5rem);
+
+      &:active {
+        opacity: .75;
+      }
+    }
+  }
+
+  [rel="decline"] path {
+    fill: $oc-red-7;
+  }
+
+  [rel="accept"] path {
+    fill: $oc-lime-7;
+  }
+
+  .overlay {
+    pointer-events: none;
+    touch-action: none;
+    @include position(absolute, 50% null null 50%);
+    margin: -50%;
+    @include size(100%);
+    transform: scale(0);
+    opacity: 0;
+
+    svg {
+      display: block;
+      @include size(100%);
+    }
+  }
+}

@@ -1,0 +1,83 @@
+footer.tabs {
+  @include position(absolute, null 0% 0% 0%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: $tab-bar-height;
+  color: $base-font-color;
+
+  a {
+    color: inherit;
+    font-size: .75rem;
+    opacity: .35;
+    transition: opacity $base-duration $base-timing;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 0 1 4.5rem;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+
+    span {
+      @include ellipsis;
+      display: block;
+      line-height: 1;
+      margin: .25rem auto .5rem;
+    }
+
+    &.active {
+      opacity: 1;
+      span {
+        font-weight: $semibold-font-weight;
+      }
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      order: 1;
+    }
+  }
+
+  path {
+    fill: currentColor;
+  }
+
+  button {
+    @include size(3.5rem);
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background: $accent-color;
+    color: $oc-white;
+    box-shadow: $base-shadow;
+  }
+}
+
+.tab-page {
+  @include position(fixed, 0% null $tab-bar-height 0%);
+  z-index: 0;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.tab-page-enter {
+  left: 100%;
+  transition: left $base-duration $ease-out-back;
+
+  &.tab-page-enter-active {
+    left: 0;
+  }
+}
+
+.tab-page-leave {
+  left: 0;
+  transition: left $base-duration $ease-out-back;
+
+  &.tab-page-leave-active {
+    left: -100%;
+  }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>inbox</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Inbox" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone" transform="translate(-27.000000, -619.000000)" fill="#343A40">
+            <g id="tabBar" transform="translate(0.000000, 595.000000)">
+                <g id="tabs">
+                    <g id="inboxTab">
+                        <g id="Group" transform="translate(27.000000, 24.000000)">
+                            <path d="M21.8445,21.5 L2.157,21.5 C1.80075,21.5 1.5,21.19925 1.5,20.84375 L1.5,14.75 L7.5675,14.75 C7.92525,16.87775 9.771,18.5 12,18.5 C14.229,18.5 16.07475,16.87775 16.4325,14.75 L22.47675,14.75 L22.5,14.84225 L22.50075,20.84375 C22.50075,21.20525 22.206,21.5 21.8445,21.5 L21.8445,21.5 L21.8445,21.5 Z M4.33575,3.5 L19.66425,3.5 L22.28925,14 L15.75,14 C15.75,16.06775 14.06775,17.75 12,17.75 C9.93225,17.75 8.25,16.06775 8.25,14 L1.71075,14 L4.33575,3.5 L4.33575,3.5 Z M20.83575,2 L3.16425,2 L0,14.65775 L0.00075,20.84375 C0.00075,22.0325 0.96825,23 2.157,23 L21.8445,23 C23.03325,23 24,22.0325 24,20.84375 L24,14.75 L20.83575,2 L20.83575,2 Z" id="icon"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
